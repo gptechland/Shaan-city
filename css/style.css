@@ -242,10 +242,14 @@ footer {
   }
 }
 .page-banner {
-  background: linear-gradient(135deg, #004aad 0%, #002f6c 100%);
+  background: url('../images/services-hero.jpg') center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 80px 20px;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .page-banner h1 {
