@@ -326,3 +326,33 @@ footer {
   font-size: 16px;
   color: #555;
 }
+/* Contact Page Layout Fix */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contact-map {
+  flex: 1 1 500px;
+}
+
+.contact-info-box {
+  flex: 1 1 300px;
+}
+
+.contact-info-box h3 {
+  margin-bottom: 10px;
+  color: #004aad;
+}
+
+.contact-info-box p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
