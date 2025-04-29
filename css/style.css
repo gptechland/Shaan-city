@@ -14,7 +14,7 @@ body {
 
 /* Header */
 .header {
-  background-color: #ffffff; /* changed to white */
+  background-color: #ffffff;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
@@ -27,7 +27,7 @@ body {
 }
 
 .nav a {
-  color: #004aad; /* dark blue */
+  color: #004aad;
   text-decoration: none;
   margin-left: 20px;
   font-weight: 600;
@@ -36,36 +36,37 @@ body {
 }
 
 .nav a:hover {
-  color: #0077cc; /* lighter blue on hover */
+  color: #0077cc;
 }
 
-/* Hero Section */
-.hero {
-  background: url('../images/hero-banner.jpg') center/cover no-repeat;
+/* Hero Sections */
+.hero, .page-hero {
+  background-size: cover;
+  background-position: center;
   height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   position: relative;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-left: 10%;
   color: white;
 }
 
-.hero-overlay {
+.hero-overlay, .page-hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.hero-content {
+.hero-content, .page-hero-content-left {
   position: relative;
   z-index: 1;
 }
 
-.hero-content h1 {
+.hero-content h1, .page-hero-content-left h1 {
   font-size: 48px;
   margin-bottom: 20px;
   font-weight: 700;
@@ -93,7 +94,7 @@ body {
   background: #ffffff;
 }
 
-.about h2, .about-page h1 {
+.about h2, .about-page h2 {
   font-size: 36px;
   margin-bottom: 20px;
 }
@@ -112,7 +113,7 @@ body {
   text-align: center;
 }
 
-.services-preview h2, .services-full h1 {
+.services-preview h2, .services-full h2 {
   font-size: 36px;
   margin-bottom: 40px;
 }
@@ -172,7 +173,7 @@ body {
   background: #003080;
 }
 
-/* Contact Section */
+/* Contact Page */
 .contact-page {
   padding: 80px 20px;
   text-align: center;
@@ -203,14 +204,28 @@ footer {
   margin-top: 50px;
 }
 
+/* Scroll Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
   }
-  .hero-content h1 {
+
+  .hero-content h1, .page-hero-content-left h1 {
     font-size: 36px;
   }
+
   .services-grid {
     flex-direction: column;
     align-items: center;
