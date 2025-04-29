@@ -6,23 +6,6 @@
   <title>Shaan City Technical Services</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-  <!-- Scroll Animation Script -->
-<script>
-  const faders = document.querySelectorAll('.fade-in');
-  const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-
-  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('appear');
-      appearOnScroll.unobserve(entry.target);
-    });
-  }, appearOptions);
-
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
-</script>
 
 <body>
 
@@ -36,7 +19,7 @@
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero fade-in">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>Quality You Can Trust</h1>
@@ -44,14 +27,14 @@
   </div>
 </section>
 
-<section class="about">
+<section class="about fade-in">
   <h2>About Us</h2>
   <p>
     Shaan City is a trusted technical services provider based in the UAE. We specialize in fabrication, civil works, and comprehensive project execution with a focus on quality and reliability.
   </p>
 </section>
 
-<section class="services-preview">
+<section class="services-preview fade-in">
   <h2>Our Core Services</h2>
   <div class="services-grid">
     <div class="service-card">
@@ -77,6 +60,24 @@
 <footer>
   <p>&copy; 2025 Shaan City Technical Services. All rights reserved.</p>
 </footer>
+
+<!-- Scroll Animation Script (Correct place!) -->
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('appear');
+      appearOnScroll.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
 
 </body>
 </html>
