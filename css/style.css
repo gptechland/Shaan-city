@@ -241,3 +241,75 @@ footer {
     align-items: center;
   }
 }
+.page-banner {
+  background: linear-gradient(135deg, #004aad 0%, #002f6c 100%);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.page-banner h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.page-banner p {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.projects-grid {
+  background: #f8f9fa;
+  padding: 60px 20px;
+}
+
+.projects-grid .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 22px;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Scroll Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
