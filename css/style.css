@@ -40,7 +40,17 @@ body {
 }
 
 /* Hero Sections */
-.hero, .page-hero {
+.hero {
+  background: url('../images/hero-banner.jpg') center/cover no-repeat;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-left: 10%;
+  color: white;
+}
+.page-hero {
   background-size: cover;
   background-position: center;
   height: 90vh;
