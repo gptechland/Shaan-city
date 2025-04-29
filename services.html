@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Shaan City Technical Services</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – Shaan City Technical Services</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
@@ -20,74 +20,77 @@
   </div>
 </header>
 
+<!-- Banner with Overlay -->
 <section class="page-banner">
+  <div class="page-banner-overlay"></div>
   <div class="container">
     <h1>Our Projects</h1>
-    <p>Delivering excellence across steel fabrication, civil works, and project management.</p>
+    <p>Delivering excellence across fabrication, civil works, and turnkey project execution.</p>
   </div>
 </section>
 
+<!-- Projects Gallery -->
 <section class="projects-grid">
-  <div class="container">
+  <div class="projects-container">
 
     <div class="project-card fade-in">
-      <img src="images/cladding.png" alt="Cladding Work">
+      <img src="images/cladding.png" alt="Cladding">
       <h3>Cladding Installation</h3>
-      <p>Durable metal cladding installed for industrial sites ensuring weather resistance and modern aesthetics.</p>
+      <p>Durable cladding panels fitted for commercial exterior finish.</p>
     </div>
 
     <div class="project-card fade-in">
-      <img src="images/steel handrail.png" alt="Steel Handrail">
-      <h3>Steel Handrail Fabrication</h3>
-      <p>Precision-engineered handrails for stairs, balconies, and walkways in stainless steel and mild steel finishes.</p>
+      <img src="images/steel-handrail.png" alt="Handrail">
+      <h3>Steel Handrail</h3>
+      <p>Custom stainless steel handrails fabricated and installed.</p>
     </div>
 
     <div class="project-card fade-in">
-      <img src="images/stairs.png" alt="Staircase Project">
-      <h3>Custom Staircase Structures</h3>
-      <p>Robust steel staircases fabricated and installed for industrial and commercial facilities.</p>
+      <img src="images/stairs.png" alt="Stairs">
+      <h3>Staircases</h3>
+      <p>Industrial and commercial stair structures with durable framing.</p>
     </div>
 
     <div class="project-card fade-in">
-      <img src="images/service3.jpg" alt="Hopper Fabrication">
-      <h3>Industrial Hopper Fabrication</h3>
-      <p>High-volume stainless steel hoppers designed for process plants and bulk material handling.</p>
+      <img src="images/hopper.png" alt="Hopper">
+      <h3>Hopper System</h3>
+      <p>Heavy-duty metal hopper for industrial bulk material handling.</p>
     </div>
 
     <div class="project-card fade-in">
-      <img src="images/crossover.png" alt="Crossover Platform">
-      <h3>Crossover Access Platforms</h3>
-      <p>Safe elevated walkways and crossovers fabricated for complex industrial layouts and roof access systems.</p>
+      <img src="images/crossover.png" alt="Crossover">
+      <h3>Crossover Platform</h3>
+      <p>Walkover platforms fabricated for rooftop and process plant use.</p>
     </div>
 
     <div class="project-card fade-in">
-      <img src="images/railing.png" alt="Railing System">
-      <h3>Safety Railing Systems</h3>
-      <p>Custom fabricated guardrails and protective barriers for operational safety and workplace compliance.</p>
+      <img src="images/railing.png" alt="Railing">
+      <h3>Protective Railing</h3>
+      <p>Steel guardrails installed for elevated structures and ramps.</p>
     </div>
 
     <div class="project-card fade-in">
       <img src="images/roof.png" alt="Roof Frame">
-      <h3>Structural Roof Frames</h3>
-      <p>Heavy-duty roof truss systems fabricated for warehouses, plants, and commercial buildings.</p>
+      <h3>Steel Roof Frames</h3>
+      <p>Large roof truss and column systems for sheds and halls.</p>
     </div>
 
     <div class="project-card fade-in">
-      <img src="images/service2.jpg" alt="Ramp Handrail">
-      <h3>Ramp Handrails & Access Rails</h3>
-      <p>ADA-compliant access ramp handrails fabricated and installed with precision fitment and high durability.</p>
+      <img src="images/handrail.png" alt="Ramp">
+      <h3>Ramp & Access Rails</h3>
+      <p>Stainless handrails for ramps and entry points of buildings.</p>
     </div>
 
     <div class="project-card fade-in">
-      <img src="images/cabana.jpg" alt="Cabana Structure">
-      <h3>Architectural Cabanas</h3>
-      <p>Decorative cabana structures fabricated in metal for outdoor commercial and residential spaces.</p>
+      <img src="images/cabana.jpg" alt="Cabana">
+      <h3>Outdoor Cabana</h3>
+      <p>Architectural shade and seating structure for outdoor venues.</p>
     </div>
 
     <div class="project-card fade-in">
-      <img src="images/gate.png" alt="Steel Gate">
-      <h3>Custom Steel Gates</h3>
-      <p>Sliding and swing gates designed and fabricated for residential communities and industrial security entrances.</p>
+      <img src="images/gate.png" alt="Gate">
+      <h3>Steel Gates</h3>
+      <p>Entrance gates fabricated and painted for villas and factories.</p>
     </div>
 
   </div>
@@ -103,7 +106,6 @@
 <script>
   const faders = document.querySelectorAll('.fade-in');
   const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-
   const appearOnScroll = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
@@ -111,7 +113,6 @@
       observer.unobserve(entry.target);
     });
   }, appearOptions);
-
   faders.forEach(fader => appearOnScroll.observe(fader));
 </script>
 
